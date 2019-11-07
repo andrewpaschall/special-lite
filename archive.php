@@ -28,7 +28,7 @@ get_header();
 						<?php 
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						while ( have_posts() ): the_post(); ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-padding-x'); ?>>
+							<article id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-padding-x'); ?> style="border: 1px solid #ccc;">
 							
 								
 									<header>
@@ -38,7 +38,7 @@ get_header();
 											echo '</a>';
 										?>
 									</header>
-									<footer class="cell" <?php if(has_post_thumbnail()){ echo 'style="border-top: none;"';} ?>>
+									<footer class="cell">
 										<?php
 											echo '<h3><a href="'.get_permalink($post->ID).'" title="'.get_the_title().'">';
 												the_title();
