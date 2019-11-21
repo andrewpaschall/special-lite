@@ -28,7 +28,7 @@ get_header();
 						<?php 
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						while ( have_posts() ): the_post(); ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-padding-x'); ?> style="border: 1px solid #ccc;">
+							<article id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-padding-x'); ?>>
 							
 								
 									<header>
