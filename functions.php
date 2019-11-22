@@ -268,7 +268,7 @@ add_filter('upload_mimes', 'sl_mime_types', 1, 1);
  * Custom Image Size for Products
  */
 
-add_image_size('product-gallery size', 500, 500);
+add_image_size('product-gallery size', 500, 500, true);
 
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
 
