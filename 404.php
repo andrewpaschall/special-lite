@@ -13,44 +13,28 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'special-lite' ); ?></h1>
-				</header><!-- .page-header -->
+			<section class="error-404 not-found grid-container" style="margin-top: 10vh; margin-bottom: 10vh;">
+				<div class="grid-x grid-padding-x align-center">
+					<div class="medium-3 cell">
+						<img src="/wp-content/uploads/2019/06/AF-200.png" alt="Door">
+					</div>
+					<div class="medium-6 cell">
+						<header class="page-header">
+							<h1 class="page-title" style="font-size: 10em;">404</h1>
+							<h2><?php esc_html_e( 'Nothing to see behind this door. But there are plenty more to&nbsp;try.', 'special-lite' ); ?></h2>
+						</header><!-- .page-header -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'special-lite' ); ?></p>
+						<div class="page-content">
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search and see what you can find?', 'special-lite' ); ?></p>
 
-					<?php
-					get_search_form();
+								<?php
+								get_search_form();
+								?>
+							</div>
+						
+					</div><!-- .page-content -->
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'special-lite' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$special_lite_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'special-lite' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$special_lite_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
+				</div><!-- .grid-x -->
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
