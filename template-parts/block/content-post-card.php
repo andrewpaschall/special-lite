@@ -11,13 +11,13 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'product-card-' . $block['id'];
+$id = 'post-card-' . $block['id'];
 if ( ! empty($block['anchor'] ) ) {
     $id = $block['anchor'];
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$classes = 'block-product-card';
+$classes = 'block-post-card';
 if( ! empty( $block['className'] ) ) {
     $classes .= ' ' . $block['className'];
 }
@@ -43,7 +43,7 @@ if( ! empty( $block['align'] ) ) {
         $post = $post_object;
         setup_postdata( $post );
         ?>
-    <a href="<?php echo get_permalink( $post_object ); ?>" title="#" class="card post-display-card" style="background-image: url('<?php echo get_the_post_thumbnail( $post_object, 'product-gallery size' ); ?>')">
+    <a href="<?php echo get_permalink( $post_object ); ?>" title="<?php echo get_the_title( $post_object ); ?>" class="card post-display-card" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'product-gallery size' ); ?>')">
         <div class="pdc-inner">
             <h3><?php echo get_field( 'post_display_label' ) ?></h3>
             <h4><?php echo get_the_title( $post_object ); ?></h4>
