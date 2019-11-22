@@ -123,8 +123,8 @@ if ( ! function_exists( 'special_lite_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+			<div class="post-thumbnail" style="width: 100%; background: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover; background-repeat: no-repeat; background position: center center; height: 40vh; ">
+				
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
