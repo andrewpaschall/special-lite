@@ -16,14 +16,18 @@
 				<?php special_lite_post_thumbnail(); ?>
 				<?php
 					if ( is_singular() ) :
+						echo '<div style="width: 100%;">';
 						the_title( '<h1 class="entry-title">', '</h1>' );
+						echo '</div>';
 					else :
+						echo '<div style="width: 100%;">';
 						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+						echo '</div>';
 					endif;
 
 					if ( 'post' === get_post_type() ) :
 				?>
-					<div class="entry-meta">
+					<div class="entry-meta" style="width: 100%;">
 						<?php
 						special_lite_posted_on();
 						special_lite_posted_by();
