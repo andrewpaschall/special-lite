@@ -1,0 +1,98 @@
+{
+    "key": "group_5ddbcfb5c8400",
+    "title": "Background Image Adjustments",
+    "fields": [
+        {
+            "key": "field_5ddbd63a45186",
+            "label": "Hero Image Type",
+            "name": "hero_image_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full size": "full size",
+                "limited height": "limited height"
+            },
+            "default_value": [
+                "full size"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ddbcfeeeada8",
+            "label": "Position",
+            "name": "position",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ddbd63a45186",
+                        "operator": "==",
+                        "value": "limited height"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top center": "top center",
+                "center center": "center center",
+                "bottom center": "bottom center",
+                "left center": "left center",
+                "right center": "right center",
+                "bottom left": "bottom left",
+                "bottom right": "bottom right",
+                "top left": "top left",
+                "top right": "top right"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "news"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1574688907
+}

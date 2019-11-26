@@ -122,10 +122,13 @@ if ( ! function_exists( 'special_lite_post_thumbnail' ) ) :
 
 		if ( is_singular() ) :
 			?>
-
-			<div class="post-thumbnail" style="width: 100%; background: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover; background-repeat: no-repeat; background position: center center; height: 40vh; ">
+			<?php if ( the_field( 'hero_image_type' ) == 'limited height' ) { ?>
+				<div class="post-thumbnail" style="width: 100%; background: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover; background-repeat: no-repeat; background-position: <?php the_field( 'position' ); ?>; height: 40vh; ">
 				
-			</div><!-- .post-thumbnail -->
+				</div><!-- .post-thumbnail -->
+			<?php } else {
+				the_post_thumbnail();
+			} ?>
 
 		<?php else : ?>
 
