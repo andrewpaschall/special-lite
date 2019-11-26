@@ -26,12 +26,28 @@ get_header();
                         <h2 class="text-center">I'm Installing</h2>
                     </div>
                     <div class="medium-4 cell">
+                        <?php
+                            $products = get_posts([
+                                'post_type' => 'product',
+                                'post_status' => 'publish',
+                                'numberposts' => -1,
+                                'order'    => 'ASC'
+                            ]);
+                            // echo '<pre>';
+                            // echo print_r($products);
+                            // echo '</pre>';
+                        ?>
                         <select onchange="location = this.value;">
-                            <option>Option</option>
-                            <option>Option</option>
-                            <option>Option</option>
-                            <option>Option</option>
-                            <option>Option</option>
+                            <?php foreach ($products as $product) { 
+                                $args = array(
+                                    'post_type' => 'product',
+                                    'post_status' => 'publish'
+                                );
+
+                                $prod_query=new WP_Query($args);
+                            ?>
+                            <option value="<?php echo get_the_ID( $product ); ?>"><?php echo get_the_title( $product ); ?></option>
+                            <?php } ?>
                         </select>
                     </div>
                 </div>
@@ -39,7 +55,7 @@ get_header();
 
             <!--Listings section-->
             <section class="grid-container" style="margin-bottom: 3em;">
-                <div class="grid-x grid-padding-x">
+                <div class="grid-x grid-margin-x">
                     <?php
                     //Define Term ID
 				    $term_id = get_queried_object()->term_id;
@@ -91,8 +107,8 @@ get_header();
                                 $image_alt = get_post_meta($product_category_image, '_wp_attachment_image_alt', true);
                                 ?>
                         
-                                <div class="medium-6 cell">
-                                    <div class="grid-x grid-padding-x" style="margin-bottom: 1em;">
+                                <div class="medium-6 cell" style="margin-bottom: 1em; border: 1px solid #c6c6c6;">
+                                    <div class="grid-x grid-padding-x" style="margin-bottom: 1em; padding-top: 1em; padding-bottom: 1em; background: #c6c6c6;">
                                         <div class="small-3 cell">
                                             <img src="<?php echo $product_category_image_resize[0] ?>" alt="<?php echo $image_alt ?>">
                                         </div>
@@ -100,14 +116,18 @@ get_header();
                                             <h3><?php echo $custom_term->name ?></h3>
                                         </div>
                                     </div>
-                                    <div class="grid-x">
-                                        <ul class="cell">
-                                            <li id=""><a href="" title="">Instructions</a></li>
-                                            <li id=""><a href="" title="">Instructions</a></li>
-                                            <li id=""><a href="" title="">Instructions</a></li>
-                                            <li id=""><a href="" title="">Instructions</a></li>
-                                            <li id=""><a href="" title="">Instructions</a></li>
-                                        </ul>
+                                    <?php $file = get_field('file'); ?>
+                                    <div class="grid-x downloads">
+                                        <div class="cell">
+                                            <a class="icon <?php 
+                                            if ($file['subtype'] == 'vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                                                echo 'docx';
+                                            } else {
+                                                echo $file['subtype'];
+                                            }
+                                            ?>" href="<?php echo $file['url']; ?>" title="<?php the_title(); if ($file['subtype'] == 'vnd.openxmlformats-officedocument.wordprocessingml.document'){ echo 'DocX'; }else{ echo $file['subtype']; } ?>" target="_blank"><?php the_title(); ?>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             <?php	}
