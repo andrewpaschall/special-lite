@@ -1,11 +1,5 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -46,62 +40,84 @@ get_header();
             <!--Listings section-->
             <section class="grid-container" style="margin-bottom: 3em;">
                 <div class="grid-x grid-padding-x">
-                <?php
-					//Define Term ID
-					$term_id = get_queried_object()->term_id;
+                    <?php
+                    //Define Term ID
+				    $term_id = get_queried_object()->term_id;
 
-					//Define Taxonomy
-					$custom_terms = get_terms( array(
-						'taxonomy'	=> 'product_category',
-						'hide_empty' => false,
-						'orderby' => 'name',
-						'order'	=> 'ASC',
-						'parent' => 0
-					));
+				    //Define Taxonomy
+				    $custom_terms = get_terms( array(
+                        'taxonomy'	=> 'product_category',
+                        'hide_empty' => false,
+                        'include'		=> 'all',
+                        'child_of'	=> $term_id,
+                        'orderby'		=> 'menu_order'
+                    ));
 
-					foreach($custom_terms as $custom_term) {
 
-						$req_query = new WP_Query();
+				    if (count($custom_terms) > 0) {
+					    foreach($custom_terms as $custom_term) {
+
+                            $args = array(
+                                'post_type' => 'products',
+                                'post_status' => 'publish',
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'product_category',
+                                        'field' => 'slug',
+                                        'terms' => $custom_term->slug,
+                                        'hide_empty' => true
+                                    )
+                                ),
+
+                                //'post__in' => $associated_downloads
+                            );
+
+						    $req_query = new WP_Query($args);
 						
-						// Define taxonomy prefix
-						$taxonomy_prefix = 'product_category';
+                            if($custom_term) {
+                                // Define taxonomy prefix
+                                $taxonomy_prefix = 'product_category';
 
-						// Define term ID
-						$cat_image_id = $custom_term->term_id;
+                                // Define term ID
+                                $cat_image_id = $custom_term->term_id;
 
-						// Define prefixed term ID
-						$term_id_prefixed = $taxonomy_prefix .'_'. $cat_image_id;
+                                // Define prefixed term ID
+                                $term_id_prefixed = $taxonomy_prefix .'_'. $cat_image_id;
 
-						//Define Category Image Field
-						$product_category_image = get_field( 'product_category_image', $term_id_prefixed );?>
+                                //Define Category Image Field
+                                $product_category_image = get_field( 'product_category_image', $term_id_prefixed );
+                                $size = 'product-gallery size';
+                                $product_category_image_resize = wp_get_attachment_image_src( $product_category_image, $size );
+                                $image_alt = get_post_meta($product_category_image, '_wp_attachment_image_alt', true);
+                                ?>
                         
-                        <div class="medium-6 cell">
-                            <div class="grid-x" style="margin-bottom: 1em;">
-                                <div class="small-4">
-                                    <img src="<?php echo $product_category_image['url'] ?>" alt="<?php echo $product_category_image['alt'] ?>">
+                                <div class="medium-6 cell">
+                                    <div class="grid-x grid-padding-x" style="margin-bottom: 1em;">
+                                        <div class="small-3 cell">
+                                            <img src="<?php echo $product_category_image_resize[0] ?>" alt="<?php echo $image_alt ?>">
+                                        </div>
+                                        <div class="small-9 cell">
+                                            <h3><?php echo $custom_term->name ?></h3>
+                                        </div>
+                                    </div>
+                                    <div class="grid-x">
+                                        <ul class="cell">
+                                            <li id=""><a href="" title="">Instructions</a></li>
+                                            <li id=""><a href="" title="">Instructions</a></li>
+                                            <li id=""><a href="" title="">Instructions</a></li>
+                                            <li id=""><a href="" title="">Instructions</a></li>
+                                            <li id=""><a href="" title="">Instructions</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="small-8">
-                                    <h3><?php echo $custom_term->name ?></h3>
-                                </div>
-                            </div>
-                            <div class="grid-x">
-                                <div class="cell">
-                                    <ul>
-                                        <li id=""><a href="" title="">Instructions</a></li>
-                                        <li id=""><a href="" title="">Instructions</a></li>
-                                        <li id=""><a href="" title="">Instructions</a></li>
-                                        <li id=""><a href="" title="">Instructions</a></li>
-                                        <li id=""><a href="" title="">Instructions</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-					<?php	}
-					wp_reset_postdata(); ?>
-				</div>
-                    <div class="medium-6 cell">
-                    </div>
-                </div>            
+                            <?php	}
+                        }
+                        
+                        wp_reset_postdata();
+                    
+                    }?>
+                
+                </div>          
             </section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
