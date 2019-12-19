@@ -122,8 +122,12 @@ if ( ! function_exists( 'special_lite_post_thumbnail' ) ) :
 
 		if ( is_singular() ) :
 			?>
-			<?php if ( the_field( 'hero_image_type' ) == 'limited height' ) { ?>
-				<div class="post-thumbnail" style="width: 100%; background: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover; background-repeat: no-repeat; background-position: <?php the_field( 'position' ); ?>; height: 40vh; ">
+			<?php 
+			$hero_image_type = get_field( 'hero_image_type' );
+			$hero_position = get_field( 'position' );
+
+			if ( $hero_image_type == 'limited height' ) { ?>
+				<div class="post-thumbnail" style="width: 100%; background: url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover; background-repeat: no-repeat;<?php if($hero_position) {echo 'background-position:  '.$hero_position;} ?>; height: 40vh; ">
 				
 				</div><!-- .post-thumbnail -->
 			<?php } else {
