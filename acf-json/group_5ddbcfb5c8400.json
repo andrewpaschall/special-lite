@@ -1,6 +1,6 @@
 {
     "key": "group_5ddbcfb5c8400",
-    "title": "Background Image Adjustments",
+    "title": "Hero Image Adjustments",
     "fields": [
         {
             "key": "field_5ddbd63a45186",
@@ -86,7 +86,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 5,
     "position": "side",
     "style": "default",
     "label_placement": "top",
@@ -94,5 +94,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574688907
+    "modified": 1574689227
 }
