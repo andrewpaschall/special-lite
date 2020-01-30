@@ -306,61 +306,13 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 
 /**
- * Menu Icons
+ * React App - ROI Calculator
  */
 
-// add_filter('wp_nav_menu_objects', 'sl_wp_nav_menu_objects', 10, 2);
+if (is_page_template('page-cost-of-frp-vs-hollow-metal.php')) {
+	wp_enqueue_script( 'roi-calculator', get_template_directory_uri() . '' );
+}
 
-// function sl_wp_nav_menu_objects( $items, $args ) {
-	
-// 	// loop
-// 	foreach ($items as $item) {
-// 		// vars
-// 		$icon = get_field('menu_icon');
-
-// 		if ($icon) {
-// 			$item->title .= '<img src="'.$icon['url'].'" />';
-// 		}
-// 	}
-
-// }
-
-// add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
-
-// function my_wp_nav_menu_objects( $items, $args ) {
-	
-// 	// loop
-// 	foreach( $items as &$item ) {
-		
-// 		// vars
-// 		$icon = get_field('icon', $item);
-		
-// 		echo '<pre>';
-// 		print_r($icon);
-// 		echo '</pre>';
-		
-// 		// append icon
-// 		// if( $icon ) {
-			
-// 		// 	$item->title .= ' <img src="'.$icon[url].'"></i>';
-			
-// 		//}
-		
-// 	}
-	
-	
-// 	// return
-// 	return $items;
-	
-// }
-
-// if ( ! function_exists( 'unregister_post_type' ) ) :
-// 	function unregister_post_type( $post_type ) {
-// 	global $wp_post_types;
-// 	if ( isset( $wp_post_types[ 'gallery' ] ) ) {
-// 		unset( $wp_post_types[ 'gallery' ] );
-// 		return true;
-// 	}
-// 	return false;
-// 	}
-// 	endif;
+if (is_page_template( 'page-cost-of-frp-vs-hollow-metal.php' )) {
+	wp_enqueue_style( 'roi-calculator', get_template_directory_uri() . '');
+}

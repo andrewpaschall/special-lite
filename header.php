@@ -22,7 +22,7 @@
 	<!-- End Google Tag Manager -->
 
 	<!--Multiview Pixel-->
-	<script src="//assets.adobedtm.com/c876840ac68fc41c08a580a3fb1869c51ca83380/satelliteLib-6fbd97c4ce3d45ba39e0e05952ac50eaa4d2a8df.js"></script>
+	<script src="//assets.adobedtm.com/175f7caa2b90/b103ccd700cd/launch-f2e04a959beb.min.js" async></script>
 	<!--End Multiview Pixel-->
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
