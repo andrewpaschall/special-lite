@@ -1,0 +1,60 @@
+{
+    "key": "group_6009fd689a159",
+    "title": "Vermont Counties",
+    "fields": [
+        {
+            "key": "field_6009fda5f4e05",
+            "label": "Vermont Counties",
+            "name": "vermont_counties",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Addison": "Addison",
+                "Bennington": "Bennington",
+                "Caledonia": "Caledonia",
+                "Chittenden": "Chittenden",
+                "Essex": "Essex",
+                "Franklin": "Franklin",
+                "Grand Isle": "Grand Isle",
+                "Lamoille": "Lamoille",
+                "Orange": "Orange",
+                "Orleans": "Orleans",
+                "Rutland": "Rutland",
+                "Washington": "Washington",
+                "Windham": "Windham",
+                "Windsor": "Windsor"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "state:vermont"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611267512
+}

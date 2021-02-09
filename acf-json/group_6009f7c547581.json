@@ -1,0 +1,63 @@
+{
+    "key": "group_6009f7c547581",
+    "title": "Nevada Counties",
+    "fields": [
+        {
+            "key": "field_6009f7e8641cc",
+            "label": "Nevada Counties",
+            "name": "nevada_counties",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Carson City": "Carson City",
+                "Churchill": "Churchill",
+                "Clark": "Clark",
+                "Douglas": "Douglas",
+                "Elko": "Elko",
+                "Esmeralda": "Esmeralda",
+                "Eureka": "Eureka",
+                "Humboldt": "Humboldt",
+                "Lander": "Lander",
+                "Lincoln": "Lincoln",
+                "Lyon": "Lyon",
+                "Mineral": "Mineral",
+                "Nye": "Nye",
+                "Pershing": "Pershing",
+                "Storey": "Storey",
+                "Washoe": "Washoe",
+                "White Pine": "White Pine"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "state:nevada"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611266044
+}
