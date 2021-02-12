@@ -25,14 +25,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content" style="display: none;"><?php esc_html_e( 'Skip to content', 'special-lite' ); ?></a>
 	<header id="masthead">
-	<div id="myNav" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<div class="overlay-content">
-			<form role="search" method="get" class="search-form hide-for-large" action="<?php echo home_url( '/' ); ?>">
-			        <span class="screen-reader-text" style="display: none;"><?php echo _x( 'Search for:', 'label' ) ?></span>
-			        <input type="search" class="search-field"
-			            value="<?php echo get_search_query() ?>" name="s"
-			            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+		<div id="mainNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<form role="search" method="get" class="search-form hide-for-large" action="<?php echo home_url( '/' ); ?>">
+					<span class="screen-reader-text" style="display: none;"><?php echo _x( 'Search for:', 'label' ) ?></span>
+					<input type="search" class="search-field"
+						value="<?php echo get_search_query() ?>" name="s"
+						title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 				</form>
 				<?php
 					wp_nav_menu( array(
@@ -55,8 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 			</nav>
 		</div>
-	</div>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
 		<small>
 			<nav>
@@ -76,10 +75,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					) );
 				?>
 				<form role="search" method="get" class="search-form flex-container align-middle" action="<?php echo home_url( '/' ); ?>">
-			        <span class="screen-reader-text" style="display: none;"><?php echo _x( 'Search for:', 'label' ) ?></span>
-			        <input type="search" class="search-field"
-			            value="<?php echo get_search_query() ?>" name="s"
-			            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+					<span class="screen-reader-text" style="display: none;"><?php echo _x( 'Search for:', 'label' ) ?></span>
+					<input type="search" class="search-field"
+						value="<?php echo get_search_query() ?>" name="s"
+						title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 				</form>
 			</nav>
 		</small>
@@ -89,31 +88,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<button class="menu-icon dark" type="button" data-toggle></button>
 			</div>
 		</div>
-
-		<div class="top-bar stacked-for-medium" id="animated-menu" data-animate="slide-in-left slide-out-left">
-			<div class="top-bar-left">
-				<?php
-					the_custom_logo();
-					if ( is_front_page() && is_home() ) :
-					?>
-						<h1 class="site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-						</h1>
-					<?php
-						else :
-					?>
-						<p class="site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-						</p>
-					<?php
-						endif;
-					$special_lite_description = get_bloginfo( 'description', 'display' );
-					if ( $special_lite_description || is_customize_preview() ) :
-						?>
-						<p class="site-description"><?php echo $special_lite_description; /* WPCS: xss ok. */ ?></p>
-				<?php endif; ?>
-
-	</div>
 	</header>
 	<?php if( get_theme_mod( 'display_header_alert', 'show' ) == 'show' ) : ?>
 		<div class="header-alert" style="padding: .5em 1em; color: #fff; font-weight: 700; text-align-center;">
