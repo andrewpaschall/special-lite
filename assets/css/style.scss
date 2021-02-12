@@ -12,15 +12,18 @@ License: MIT
 @import 'partials/mixins';
 @import 'partials/variables';
 
-// Normalize & Santize.
-@import 'vendor/normalize';
-@import 'vendor/sanitize';
+// // Normalize & Santize.
+// @import 'vendor/normalize';
+// @import 'vendor/sanitize';
 
-// Structure.
-@import 'partials/structure';
+// // Structure.
+// @import 'partials/structure';
 
-// WPCore.
-@import 'partials/wpcore';
+// // WPCore.
+// @import 'partials/wpcore';
 
-// Base.
-@import 'partials/base';
+// // Base.
+// @import 'partials/base';
+
+// Header.
+@import 'partials/header';
