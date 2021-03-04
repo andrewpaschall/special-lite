@@ -1,0 +1,92 @@
+{
+    "key": "group_6009fbd8b2f88",
+    "title": "South Carolina Counties",
+    "fields": [
+        {
+            "key": "field_6009fbed9b2f8",
+            "label": "South Carolina Counties",
+            "name": "south_carolina_counties",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Abbeville": "Abbeville",
+                "Aiken": "Aiken",
+                "Allendale": "Allendale",
+                "Anderson": "Anderson",
+                "Bamberg": "Bamberg",
+                "Barnwell": "Barnwell",
+                "Beaufort": "Beaufort",
+                "Berkeley": "Berkeley",
+                "Calhoun": "Calhoun",
+                "Charleston": "Charleston",
+                "Cherokee": "Cherokee",
+                "Chester": "Chester",
+                "Chesterfield": "Chesterfield",
+                "Clarendon": "Clarendon",
+                "Colleton": "Colleton",
+                "Darlington": "Darlington",
+                "Dillon": "Dillon",
+                "Dorchester": "Dorchester",
+                "Edgefield": "Edgefield",
+                "Fairfield": "Fairfield",
+                "Florence": "Florence",
+                "Georgetown": "Georgetown",
+                "Greenville": "Greenville",
+                "Greenwood": "Greenwood",
+                "Hampton": "Hampton",
+                "Horry": "Horry",
+                "Jasper": "Jasper",
+                "Kershaw": "Kershaw",
+                "Lancaster": "Lancaster",
+                "Laurens": "Laurens",
+                "Lee": "Lee",
+                "Lexington": "Lexington",
+                "Marion": "Marion",
+                "Marlboro": "Marlboro",
+                "Mccormick": "Mccormick",
+                "Newberry": "Newberry",
+                "Oconee": "Oconee",
+                "Orangeburg": "Orangeburg",
+                "Pickens": "Pickens",
+                "Richland": "Richland",
+                "Saluda": "Saluda",
+                "Spartanburg": "Spartanburg",
+                "Sumter": "Sumter",
+                "Union": "Union",
+                "Williamsburg": "Williamsburg",
+                "York": "York"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "state:south-carolina"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611267087
+}

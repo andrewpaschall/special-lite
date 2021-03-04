@@ -1,0 +1,67 @@
+{
+    "key": "group_6009f74893a05",
+    "title": "New Jersey Counties",
+    "fields": [
+        {
+            "key": "field_6009f765f6154",
+            "label": "New Jersey Counties",
+            "name": "new_jersey_counties",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Atlantic": "Atlantic",
+                "Bergen": "Bergen",
+                "Burlington": "Burlington",
+                "Camden": "Camden",
+                "Cape May": "Cape May",
+                "Cumberland": "Cumberland",
+                "Essex": "Essex",
+                "Gloucester": "Gloucester",
+                "Hudson": "Hudson",
+                "Hunterdon": "Hunterdon",
+                "Mercer": "Mercer",
+                "Middlesex": "Middlesex",
+                "Monmouth": "Monmouth",
+                "Morris": "Morris",
+                "Ocean": "Ocean",
+                "Passaic": "Passaic",
+                "Salem": "Salem",
+                "Somerset": "Somerset",
+                "Sussex": "Sussex",
+                "Union": "Union",
+                "Warren": "Warren"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "state:new-jersey"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611265921
+}
