@@ -1,0 +1,24 @@
+<?php
+/**
+ * The template for displaying all single downloads
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package Special-Lite
+ */
+get_header();
+?>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			<h1>This is the Download page</h1>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_footer();
+?>
+
+

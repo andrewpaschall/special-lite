@@ -1,11 +1,6 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * The template for displaying archive pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -21,7 +16,7 @@ get_header();
 				<section class="grid-container">
 					<div class="grid-x">
 						<div class="cell">
-							<h1>Blog</h1>
+							<h1><?php echo get_the_archive_title(); ?></h1>
 						</div>					
 					</div>
 				</section>
@@ -43,7 +38,7 @@ get_header();
 											echo '</a>';
 										?>
 									</header>
-									<footer class="cell" <?php if(has_post_thumbnail()){ echo 'style="border-top: none;"';} ?>>
+									<footer class="cell">
 										<?php
 											echo '<h3><a href="'.get_permalink($post->ID).'" title="'.get_the_title().'">';
 												the_title();
