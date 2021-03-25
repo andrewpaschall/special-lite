@@ -1,0 +1,43 @@
+@mixin doc-breaks {
+
+}
+.doc-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em .5em;
+    h2, h3, h4, h5, h6 {
+        text-align: center;
+        line-height: 1.05;
+        margin-bottom: 1em;
+    }
+    @include feature-container;
+    @media screen and (min-width: 960px){
+        //Gettin my CSS Grid action on
+        display: grid;
+        grid-template-columns: 50fr 50fr;
+        grid-column-gap: 5px;
+        align-items: stretch;
+        h2, h3, h4, h5, h6 {
+            grid-area: header;
+        }
+        grid-template-areas:
+            "header header";
+        //End Grid
+    }
+    .button {
+        //More of that Grid noise
+        display: grid;
+        grid-template-columns: 90fr 10fr;
+        align-items: center;
+        text-align: left;
+        grid-column-gap: 5px;
+        //End grid
+        width: 100%;
+        vertical-align: middle;
+        margin-bottom: 10px;
+        &:after {
+            @include css-triangle (.25em, $white, right);
+        }
+    }
+}

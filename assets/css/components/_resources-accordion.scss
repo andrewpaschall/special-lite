@@ -1,0 +1,36 @@
+.resources-accordion {
+	background: $white;
+	padding: 10px;
+	.accordion-header {
+		background: $dark-gray;
+		padding: 10px;
+		h3 {
+			color: $white;
+		}
+	}
+	.accordion {
+		margin-bottom: 0;
+		&:last-child {
+			border-bottom: none;
+			border-radius: none;
+		}
+	}
+	.accordion-item {
+		background: $light-gray;
+		border-bottom: 5px solid $white;
+		a {
+			color: $dark-gray;
+		}
+		&:last-child {
+			border-bottom: none;
+			border-radius: none;
+		}
+	}
+	.accordion-content {
+		border: 0;
+		text-transform: uppercase;
+		a {
+			color: $primary-color;
+		}
+	}
+}

@@ -1,0 +1,99 @@
+footer {
+	padding: 100px 50px;
+	background: $black;
+	color: $white;
+	label {
+		color: $white;
+	}
+	h4 {
+		color: $white;
+		font-weight: 900;
+		&:after {
+			content: "";
+			border: 1px solid $white;
+			display: block;
+			clear: both;
+			width: 43px;
+		}
+	}
+	&.site-footer {
+		position: absolute;
+		//bottom: 0;
+		width: 100%;
+	}
+	nav {
+		.menu {
+			margin-bottom: 1em;
+		}
+		.menu a{
+			padding: 0;
+			color: $white;
+			line-height: 2;
+		}
+
+		.menu.horizontal {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			#Social#Networks {
+				justify-content: flex-start;
+			}
+		}
+
+		.menu.horizontal a {
+			padding-right: 10px;
+		}
+	}
+
+	.social-links {
+		a {
+			transition: opacity 0.5s ease;
+  			opacity: 1; 
+		}
+		a:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.sub-menu {
+		list-style: none;
+		margin-left: .5rem;
+		a {
+			display: inline;
+		}
+		li:before {
+			content: '-';
+		  	position: relative;
+		  	clear: right;
+		}
+	}
+
+	.legalese {
+			margin-top: 3em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			.menu {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 0;
+				li{
+					display: flex;
+					align-items: center;
+					&:after {
+						content: "|";
+						margin-right: 10px;
+					}
+					&:last-child{
+						&:after {
+							content:"";
+						}
+					}
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+}

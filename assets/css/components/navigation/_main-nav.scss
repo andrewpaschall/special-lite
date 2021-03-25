@@ -1,0 +1,225 @@
+$header-shadow: 0 3px 5px rgba($medium-gray, .5);
+
+.logo {
+	max-width: 225px;
+	min-width: 150px;
+	@include breakpoint(medium) {
+		width: 100%;
+	}
+}
+.title-bar {
+	background: $white;
+	box-shadow: $header-shadow;
+}
+
+.dropdown.menu.vertical > li.opens-left > a::after {
+	border: none;
+	content: url('/wp-content/themes/special-lite/assets/img/ic-chevron-down-18px.svg');
+	margin-top: -7px;
+	right: 5px;
+	width: 12px;
+	height: 12px;
+}
+.accordion-menu {
+	li {
+		border-bottom: 1px solid $light-gray;
+		&:last-child{
+			border-bottom: none;
+		}
+		a {
+			color: $black;
+			&:hover, &:active {
+				color: $black;
+			}
+		}
+	}
+
+	.is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
+		border: none;
+		content: url('/wp-content/themes/special-lite/assets/img/ic-chevron-down-18px.svg');
+		margin-top: -7px;
+		width: 12px;
+	}
+
+	.is-accordion-submenu-parent[aria-expanded='true'] {
+		background: $light-gray;
+		border-bottom: 1px solid $medium-gray;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+
+	.is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+		transform-origin: center center;
+		margin-top: 10px;
+	}
+
+}
+
+.is-accordion-submenu {
+	font-weight: normal;
+	text-transform: none;
+	li {
+		padding-left: .75em;
+		border-bottom: 1px solid $light-gray;
+	}
+}
+.top-bar {
+	background: $white;
+	box-shadow: $header-shadow;
+	text-transform: uppercase;
+	font-weight: bold;
+	// padding-top: 0;
+	// padding-bottom: 0;
+	.top-bar-left{
+		li {
+			border-bottom: 1px solid $light-gray;
+			&:first-of-type {
+				position: relative;
+				top: 5px;
+			}
+		}
+		a {
+			color: $medium-gray;
+			font-size: .65em;
+			display: flex;
+			align-items: center;
+			&:hover{
+				color: $black;
+			}
+		}
+		.logo {
+			display: none;
+			@include breakpoint(large) {
+				display: block;
+			}
+		}
+	}
+	ul {
+		background: $white;
+	}
+	input[type="search"] {
+		margin: 0 auto;
+		font-size: 80%;
+		line-height: $global-lineheight/2;
+		padding: $input-padding/2;
+		padding-left: 2em;
+		height: calc(2.4375rem * .6);
+		border: 1px solid rgba($medium-gray, .25);
+		width: 100%;
+		max-width: 540px;
+		background-image: url('/wp-content/themes/special-lite/assets/img/ic-search-48px.svg');
+		background-repeat: no-repeat;
+		background-position: 1px 1px;
+		&:focus{
+			border: 1px solid rgba($medium-gray, .5);
+			box-shadow: none;
+		}
+
+	}
+}
+.micro-menu {
+	padding: 0 .75em;
+	background: $light-gray;
+	a {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		img.lang {
+			display: block;
+			width: 20px;
+		}
+	}
+	input[type="search"] {
+		margin: 0;
+		font-size: 80%;
+		line-height: $global-lineheight/2;
+		padding: $input-padding/2;
+		padding-left: 2em;
+		height: calc(2.4375rem * .6);
+		border: 1px solid rgba($medium-gray, .25);
+		min-width: 150px;
+		background-image: url('/wp-content/themes/special-lite/assets/img/ic-search-48px.svg');
+		background-repeat: no-repeat;
+		background-position: 1px 1px;
+		&:focus{
+			border: 1px solid rgba($medium-gray, .5);
+			box-shadow: none;
+		}
+
+	}
+	li {
+		display: flex;
+		align-items: center;
+		padding-right: 0;
+		padding-left: 0;
+		a {
+			padding-right: 5px;
+			padding-left: 5px;
+		}	
+	}
+}
+
+header nav a {
+	color: $black;
+	&:hover{
+		color: $black;
+	}
+}
+
+.is-dropdown-submenu{
+	background: $white;
+	border: solid 1px $light-gray;
+	box-shadow: 1px 1px 3px rgba($medium-gray, .25);
+	font-weight: normal;
+	text-transform: none;
+	z-index: 200;
+	&:before {
+		content:" ";
+		display:block;
+		background: $white;
+		position: relative;
+		z-index: 300;
+		width: 16px;
+		height: 16px;
+		transform: rotate(45deg);
+		border: 1px solid $light-gray;
+		border-right: transparent;
+		border-bottom: transparent;
+		left: 80%;
+		top: -9px;
+	}
+	li:hover {
+		background: $light-gray;
+	}
+}
+
+.is-dropdown-submenu a, .is-dropdown-submenu a:active {
+	color: $black;
+}
+
+.menu-icon:focus {
+	box-shadow: none;
+	border: none;
+	outline: none;
+}
+
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+
+  }
+}
+
+.menu-localization-container {
+	margin-right: 15px;
+}

@@ -1,0 +1,169 @@
+//Menu Icons
+$x: 50% !default;
+$y: 50% !default;
+$height: 25px !default;
+$width: 25px !default;
+
+@mixin icon-replace($image, $x: 50%, $y: 50%, $width: 25px, $height: 25px) {
+	text-indent: -99999em;
+	overflow: hidden;
+	text-align: left;
+	width: $width;
+	height: $height;
+	background: {
+		image: $image;
+		repeat: no-repeat;
+		position: $x $y;
+		size: $width $height;
+	}
+}
+
+@mixin icon-prepend($image, $width: 20px, $height: 20px) {
+	display: block;
+	content: '';
+	height: $height;
+    width: $width;
+    margin-right: 3px;
+	background: {
+		image: $image;
+		repeat: no-repeat;
+		size: $width $height;
+	}
+}
+
+.icon {
+
+	margin-right: 5px;
+	
+	&:last-child {
+		margin-right: 0;
+	}
+
+	/**
+	* Social Icons
+	*/
+	
+	&.facebook {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-facebook.svg'), 0, $y, $width, $height);
+		}	
+	}
+	&.instagram {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-instagram.svg'), 0, $y, $width, $height);
+		}
+	}
+	&.linkedin {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-linkedin.svg'), 0, 50%, $width, $height);
+				}
+	}
+	&.twitter {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-twitter.svg'), 0, 50%, $width, $height);
+				}
+	}
+	&.youtube {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-youtube.svg'), 0, 50%, $width, $height);
+		}
+	}
+
+	/**
+	* International Icons
+	*/
+	&.france {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/france.svg'), 0, 50%, 27px, 18px);
+		}
+	}
+
+	&.germany {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/germany.svg'), 0, 50%, 27px, 18px);
+		}
+	}
+
+	&.mexico {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/mexico.svg'), 0, 50%, 27px, 18px);
+		}
+	}
+	
+	&.saudi-arabia {
+		a {
+			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/saudi-arabia.svg'), 0, 50%, 27px, 18px);
+		}
+	}
+
+	/**
+	* Top Navigation Pre-Pended Icons
+	*/
+
+	&.marker {
+		a {
+			&:before {
+                @include icon-prepend(url('/wp-content/themes/special-lite/assets/img/sl-marker.svg'), 10px, 15px)
+			}
+		}
+	}
+
+	&.book {
+		a {
+			&:before {
+				@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/sl-book.svg'), 13px, 13px)
+			}
+		}
+	}
+
+	&.cart-icon {
+		a {
+			&:before {
+				@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/sl-shopping-cart.svg'), 15px, 15px)
+			}
+		}
+	}
+
+	/**
+	* Resources Prepended Document Icons
+	*/
+	$doc-icon-size: 30px;
+	@mixin icon-vertical-align() {
+		display: flex;
+		align-items: center;
+	}
+
+	&.pdf {
+
+		@include icon-vertical-align();
+
+		&:before {
+			@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/pdf-icon.svg'), $doc-icon-size, $doc-icon-size);
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+
+	&.acad {
+
+		@include icon-vertical-align();
+
+		&:before {
+			@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/cad-icon.svg'), $doc-icon-size, $doc-icon-size);
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+
+	&.docx {
+
+		@include icon-vertical-align();
+
+		&:before {
+			@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/word-icon.svg'), $doc-icon-size, $doc-icon-size);
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+
+}

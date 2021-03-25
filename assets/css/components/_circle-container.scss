@@ -1,0 +1,7 @@
+.circle-container {
+	border-radius: 50%;
+	overflow: hidden;
+	&.border {
+		border: 5px solid;
+	}
+}

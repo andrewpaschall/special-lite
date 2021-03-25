@@ -1,0 +1,7 @@
+.product-photo-gallery {
+    background: $light-gray;
+    display: grid;
+    grid-template-columns: 33fr 33fr 33fr;
+    align-items: stretch;
+    justify-items: stretch;
+}

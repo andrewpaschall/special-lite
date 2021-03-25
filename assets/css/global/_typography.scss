@@ -1,0 +1,27 @@
+h1,h3,h4,h5,h6 {
+	font-weight: 900;
+}
+
+.has-medium-font-size, .has-large-font-size, .has-huge-font-size {
+	line-height: 1.15em;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, label, div, blockquote {
+	&.white {
+		color: $white;
+	}
+}
+
+.white {
+	li {
+		color: $white;
+	}
+}
+
+blockquote {
+	border-left: 3px solid $black;
+
+	&.white {
+		border-left: 3px solid $white;
+	}
+}

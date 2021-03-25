@@ -6,14 +6,14 @@
  */
 
 // --- Dependencies ---
-@import 'vendor/normalize';
-@import '../_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
-@import '../_vendor/sassy-lists/stylesheets/helpers/true';
-@import '../_vendor/sassy-lists/stylesheets/functions/contain';
-@import '../_vendor/sassy-lists/stylesheets/functions/purge';
-@import '../_vendor/sassy-lists/stylesheets/functions/remove';
-@import '../_vendor/sassy-lists/stylesheets/functions/replace';
-@import '../_vendor/sassy-lists/stylesheets/functions/to-list';
+@import '../normalize/normalize';
+@import '../sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '../sassy-lists/stylesheets/helpers/true';
+@import '../sassy-lists/stylesheets/functions/contain';
+@import '../sassy-lists/stylesheets/functions/purge';
+@import '../sassy-lists/stylesheets/functions/remove';
+@import '../sassy-lists/stylesheets/functions/replace';
+@import '../sassy-lists/stylesheets/functions/to-list';
 
 // --- Settings ---
 // import your own `settings` here or

@@ -136,7 +136,7 @@ add_action( 'widgets_init', 'special_lite_widgets_init' );
 
 /**
  * Replaces the excerpt "Read More" text by a link
- **/ 
+ **/
 function new_excerpt_more($more) {
 	global $post;
  return '<a class="moretag" href="'. get_permalink($post->ID) . '">...Read More»</a>';
@@ -149,11 +149,11 @@ add_filter('excerpt_more', 'new_excerpt_more');
 function special_lite_scripts() {
 	wp_enqueue_style( 'special-lite-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'special-lite-javascript', get_template_directory_uri() . '/js/app.js', array(), '20151215', true );
+	wp_enqueue_script( 'special-lite-javascript', get_template_directory_uri() . '/assets/js/custom.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'special-lite-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'special-lite-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'special-lite-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'special-lite-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -222,7 +222,7 @@ add_filter( 'get_the_archive_title', function ($title) {
  */
 
 function wpb_widgets_init() {
-	
+
 	//Downloads Sidebar
     register_sidebar( array(
         'name' =>__( 'downloads', 'wpb'),
@@ -244,7 +244,7 @@ function wpb_widgets_init() {
 		'before_title' => '<h4 class="widget-title">',
         'after_title' => '</h4>',
 	));
-	
+
 	//Blog Archive Sidebar
 	register_sidebar( array(
         'name' =>__( 'Blog Archive Sidebar Sidebar', 'wpb'),
@@ -256,7 +256,7 @@ function wpb_widgets_init() {
         'after_title' => '</h4>',
     ) );
     }
- 
+
 add_action( 'widgets_init', 'wpb_widgets_init' );
 
 add_filter( 'facetwp_indexer_query_args', function( $args ) {
@@ -271,7 +271,7 @@ add_filter( 'facetwp_indexer_query_args', function( $args ) {
 function sl_mime_types($mime_types){
 	$mime_types['dwg'] = 'application/acad'; //Adding dwg extension
 	$mime_types['doc'] = 'application/msword'; //adding doc extension
-	
+
     return $mime_types;
 }
 add_filter('upload_mimes', 'sl_mime_types', 1, 1);

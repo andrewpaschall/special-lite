@@ -1,0 +1,90 @@
+$card-product-hover-price-color: $primary-color;
+$card-product-hover-font-size: 1.5rem;
+$card-product-hover-title-font-size: 1.4rem;
+
+.card-product {
+  //position: relative;
+  line-height: 1.2rem;
+  transition: all 0.35s ease;
+  border: 1px solid $medium-gray;
+
+  header {
+    width: 100%;
+    position: relative;
+    padding-top: 1em;
+    background: $white;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+      img {
+          max-width: 100%;
+          height: auto;
+          max-height: 100%;
+      }
+  }
+  
+  .title {
+    font-size: $card-product-hover-title-font-size;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+  }
+  .details {
+    @include card-section;
+  }
+  
+  .icons {
+    width: 100%;
+    align-self: flex-end;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+  
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-bottom: .25em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+  
+      svg{
+        display: block;
+        font-size: 1.5rem;
+        line-height: rem-calc(40);
+        width: rem-calc(40);
+        fill: $medium-gray;
+        
+        .cls-1{
+          fill: $medium-gray;
+        }
+        
+        .cls-2 {
+          fill: none;
+        }
+      }
+    }
+  }
+  footer {
+    background: $medium-gray;
+    position: relative;
+    z-index: 200;
+    a, h3 {
+      color: $white;
+      cursor: pointer;
+      transition: color .25s ease;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+}

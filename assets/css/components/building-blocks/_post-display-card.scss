@@ -1,0 +1,26 @@
+.post-display-card {
+    padding: 2em;
+    background-size: cover;
+    position: center center;
+}
+
+.pdc-inner {
+    background-color: rgba($white, .85);
+    padding: .75em;
+    overflow-y: hidden;
+    height: 250px;
+    word-break: break-word;
+    hyphens: auto;
+    h3 {
+        font-size: 1.25em;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+    h4 {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.15em;
+        line-height: 1.2em;
+
+    }
+}

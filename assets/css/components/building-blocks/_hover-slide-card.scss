@@ -1,0 +1,25 @@
+.hover-slide-card {
+    position: relative;
+    width: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        background: rgba($black, .75);
+        width: 100%;
+        padding: .15em 1em;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        h3, h4 {
+            line-height: 1.05;
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
