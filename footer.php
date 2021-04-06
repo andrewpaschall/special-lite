@@ -33,8 +33,8 @@
 						<div class="_form_element _x36227399">
 								<input type="text" name="email" placeholder="Type your email" required/>
 
-									<button id="_form_5_submit" class="_submit button large pill success" type="submit">
-										SIGN UP
+									<button id="_form_5_submit" class="_submit button large pill" type="submit">
+										SIGN UP NOW
 									</button>
 						</div>
 						<div class="_clear-element">

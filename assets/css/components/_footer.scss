@@ -11,6 +11,10 @@
 	}
 }
 
+@mixin foot-pad {
+	padding: 100px 50px;
+}
+
 //AC Form for Footer
 ._form_hide { display:none; visibility:hidden; }
 ._form_show { display:block; visibility:visible; }
@@ -28,7 +32,6 @@
 #_form_5_ ._row input[type="checkbox"] + span label { display:inline; }
 
 footer {
-	padding: 100px 50px;
 	background: $black;
 	color: $white;
 	label {
@@ -39,10 +42,12 @@ footer {
 		font-weight: 900;
 	}
 	.connect-section {
+		@include foot-pad;
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
 		padding-bottom: 100px;
+		background: $dark-gray;
 		h3 {
 			@include short-score(auto, auto);
 		}
@@ -59,10 +64,16 @@ footer {
 		.pill {
 			padding-right: 4em;
 			padding-left: 4em;
+			background: $bright-orange;
+			&:hover {
+				background: $orange;
+				color: $white;
+			}
 		}
 	}
 
 	.links-section {
+		@include foot-pad;
 		h4 {
 			@include short-score (0px, 0px);
 		}
