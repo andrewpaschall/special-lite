@@ -1,3 +1,9 @@
-.button.success {
-	color: $white;
+.button{
+	&.success {
+		color: $white;
+	}
+}
+
+.pill {
+	border-radius: 50px;
 }

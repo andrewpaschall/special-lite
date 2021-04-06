@@ -73,13 +73,29 @@ $foundation-palette: (
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
-  alert: #cc4b37,
+	alert: #cc4b37,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
+$light-gray: #ebebeb;
+$medium-gray: #D3D4DA;
+$dark-gray: #333333;
+$black: #1a1a1a;
 $white: #fefefe;
+$light-blue-grey: $medium-gray;
+$blue: #617088;
+$dark-blue: #333e47;
+$navy: $dark-blue;
+$gold: #c69214;
+$dark-gold: #9e780a;
+$dark-green: #4a4d43;
+$green: #7c7f71;
+$light-green: #c5c4ba;
+$light-red: #dbcccd;
+$red: #601211;
+$dark-red: #441312;
+$crimson: $dark-red;
+$orange: #c75443;
+$flat-orange: $orange;
+$bright-orange: #ed5c38;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
