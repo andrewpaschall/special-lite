@@ -1,3 +1,21 @@
+.download-list {
+	margin-bottom: 2em;
+}
+
+.position-right {
+	width: 300px;
+	transform: translateX(300px);
+}
+
+aside[data-options="inCanvasFor:medium"] {
+	@include breakpoint(medium) {
+		visibility: visible!important;
+		z-index: 0!important;
+		position: relative;
+		transform: translateX(0)!important;
+	}
+}
+
 .downloads {
     padding: .75em 1.25em;
     font-weight: 700;
@@ -8,4 +26,24 @@
     a {
         color: $black;
     }
+}
+
+.downloads-filter {
+	@include breakpoint(medium) {
+		border-right: 1px solid $light-gray;
+		background: $white;
+	}
+	.close-button-container {
+		overflow: auto;
+	}
+	.close-button {
+		color: $black;
+		position: relative;
+		left: 90%;
+		z-index: 0;
+		&:focus {
+			border: 0;
+			outline: none;
+		}
+	}
 }

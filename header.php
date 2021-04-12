@@ -108,7 +108,7 @@
 					) );
 				?>
 			</nav>
-	</div>
+		</div>
 	</header>
 	<?php if( get_theme_mod( 'display_header_alert', 'show' ) == 'show' ) : ?>
 		<div class="header-alert" style="padding: .5em 1em; color: #fff; font-weight: 700; text-align-center;">
