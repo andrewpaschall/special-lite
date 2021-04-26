@@ -65,16 +65,7 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
-$global-lineheight: 1.5;
-$foundation-palette: (
-  primary: #1779ba,
-  secondary: #767676,
-  success: #3adb76,
-  warning: #ffae00,
-	alert: #cc4b37,
-);
+//Brand Colors
 $light-gray: #ebebeb;
 $medium-gray: #D3D4DA;
 $dark-gray: #333333;
@@ -96,6 +87,17 @@ $crimson: $dark-red;
 $orange: #c75443;
 $flat-orange: $orange;
 $bright-orange: #ed5c38;
+
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 1.5;
+$foundation-palette: (
+  primary: $gold,
+  secondary: #767676,
+  success: #3adb76,
+  warning: #ffae00,
+	alert: #cc4b37,
+);
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;

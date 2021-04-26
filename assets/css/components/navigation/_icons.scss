@@ -34,7 +34,7 @@ $width: 25px !default;
 .icon {
 
 	margin-right: 5px;
-	
+
 	&:last-child {
 		margin-right: 0;
 	}
@@ -42,30 +42,30 @@ $width: 25px !default;
 	/**
 	* Social Icons
 	*/
-	
+
 	&.facebook {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-facebook.svg'), 0, $y, $width, $height);
-		}	
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/sl-facebook.svg'), 0, $y, $width, $height);
+		}
 	}
 	&.instagram {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-instagram.svg'), 0, $y, $width, $height);
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/sl-instagram.svg'), 0, $y, $width, $height);
 		}
 	}
 	&.linkedin {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-linkedin.svg'), 0, 50%, $width, $height);
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/sl-linkedin.svg'), 0, 50%, $width, $height);
 				}
 	}
 	&.twitter {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-twitter.svg'), 0, 50%, $width, $height);
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/sl-twitter.svg'), 0, 50%, $width, $height);
 				}
 	}
 	&.youtube {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/sl-youtube.svg'), 0, 50%, $width, $height);
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/sl-youtube.svg'), 0, 50%, $width, $height);
 		}
 	}
 
@@ -74,25 +74,25 @@ $width: 25px !default;
 	*/
 	&.france {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/france.svg'), 0, 50%, 27px, 18px);
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/france.svg'), 0, 50%, 27px, 18px);
 		}
 	}
 
 	&.germany {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/germany.svg'), 0, 50%, 27px, 18px);
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/germany.svg'), 0, 50%, 27px, 18px);
 		}
 	}
 
 	&.mexico {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/mexico.svg'), 0, 50%, 27px, 18px);
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/mexico.svg'), 0, 50%, 27px, 18px);
 		}
 	}
-	
+
 	&.saudi-arabia {
 		a {
-			@include icon-replace(url('/wp-content/themes/special-lite/assets/img/saudi-arabia.svg'), 0, 50%, 27px, 18px);
+			@include icon-replace(url('/wp-content/themes/WPGulpTheme/assets/img/saudi-arabia.svg'), 0, 50%, 27px, 18px);
 		}
 	}
 
@@ -103,7 +103,7 @@ $width: 25px !default;
 	&.marker {
 		a {
 			&:before {
-                @include icon-prepend(url('/wp-content/themes/special-lite/assets/img/sl-marker.svg'), 10px, 15px)
+                @include icon-prepend(url('/wp-content/themes/WPGulpTheme/assets/img/sl-marker.svg'), 10px, 15px)
 			}
 		}
 	}
@@ -111,7 +111,7 @@ $width: 25px !default;
 	&.book {
 		a {
 			&:before {
-				@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/sl-book.svg'), 13px, 13px)
+				@include icon-prepend(url('/wp-content/themes/WPGulpTheme/assets/img/sl-book.svg'), 13px, 13px)
 			}
 		}
 	}
@@ -119,7 +119,7 @@ $width: 25px !default;
 	&.cart-icon {
 		a {
 			&:before {
-				@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/sl-shopping-cart.svg'), 15px, 15px)
+				@include icon-prepend(url('/wp-content/themes/WPGulpTheme/assets/img/sl-shopping-cart.svg'), 15px, 15px)
 			}
 		}
 	}
@@ -129,7 +129,8 @@ $width: 25px !default;
 	*/
 	$doc-icon-size: 30px;
 	@mixin icon-vertical-align() {
-		display: flex;
+		display: grid;
+		grid-template-columns: 35px auto;
 		align-items: center;
 	}
 
@@ -138,7 +139,7 @@ $width: 25px !default;
 		@include icon-vertical-align();
 
 		&:before {
-			@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/pdf-icon.svg'), $doc-icon-size, $doc-icon-size);
+			@include icon-prepend(url('/wp-content/themes/WPGulpTheme/assets/img/pdf-icon.svg'), $doc-icon-size, $doc-icon-size);
 			display: inline-block;
 			margin-right: 10px;
 		}
@@ -149,7 +150,7 @@ $width: 25px !default;
 		@include icon-vertical-align();
 
 		&:before {
-			@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/cad-icon.svg'), $doc-icon-size, $doc-icon-size);
+			@include icon-prepend(url('/wp-content/themes/WPGulpTheme/assets/img/cad-icon.svg'), $doc-icon-size, $doc-icon-size);
 			display: inline-block;
 			margin-right: 10px;
 		}
@@ -160,7 +161,16 @@ $width: 25px !default;
 		@include icon-vertical-align();
 
 		&:before {
-			@include icon-prepend(url('/wp-content/themes/special-lite/assets/img/word-icon.svg'), $doc-icon-size, $doc-icon-size);
+			@include icon-prepend(url('/wp-content/themes/WPGulpTheme/assets/img/word-icon.svg'), $doc-icon-size, $doc-icon-size);
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+
+	&.excel {
+		@include icon-vertical-align();
+		&:before {
+			@include icon-prepend(url('/wp-content/themes/WPGulpTheme/assets/img/sl-excel.svg'), $doc-icon-size, $doc-icon-size);
 			display: inline-block;
 			margin-right: 10px;
 		}

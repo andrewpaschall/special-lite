@@ -20,6 +20,7 @@ $header-shadow: 0 3px 5px rgba($medium-gray, .5);
 	width: 12px;
 	height: 12px;
 }
+
 .accordion-menu {
 	li {
 		border-bottom: 1px solid $light-gray;
@@ -36,7 +37,7 @@ $header-shadow: 0 3px 5px rgba($medium-gray, .5);
 
 	.is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after {
 		border: none;
-		content: url('/wp-content/themes/special-lite/assets/img/ic-chevron-down-18px.svg');
+		content: url('/wp-content/themes/WPGulpTheme/assets/img/ic-chevron-down-18px.svg');
 		margin-top: -7px;
 		width: 12px;
 	}
@@ -157,15 +158,16 @@ $header-shadow: 0 3px 5px rgba($medium-gray, .5);
 		a {
 			padding-right: 5px;
 			padding-left: 5px;
-		}	
+		}
 	}
 }
 
 header nav a {
 	color: $black;
-	&:hover{
+	&:hover, &:active{
 		color: $black;
 	}
+
 }
 
 .is-dropdown-submenu{
@@ -218,6 +220,12 @@ header nav a {
     }
 
   }
+}
+
+#primary-menu {
+	.is-dropdown-submenu-parent a, .is-dropdown-submenu-parent a:hover, .is-dropdown-submenu-parent a:active, .is-dropdown-submenu-parent a:focus {
+		color: $black;
+	}
 }
 
 .menu-localization-container {
