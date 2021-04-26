@@ -1,0 +1,62 @@
+{
+    "key": "group_6009f3ac9087b",
+    "title": "Maine Counties",
+    "fields": [
+        {
+            "key": "field_6009f3c238817",
+            "label": "Maine Counties",
+            "name": "maine_counties",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Androscoggin": "Androscoggin",
+                "Aroostook": "Aroostook",
+                "Cumberland": "Cumberland",
+                "Franklin": "Franklin",
+                "Hancock": "Hancock",
+                "Kennebec": "Kennebec",
+                "Knox": "Knox",
+                "Lincoln": "Lincoln",
+                "Oxford": "Oxford",
+                "Penobscot": "Penobscot",
+                "Piscataquis": "Piscataquis",
+                "Sagadahoc": "Sagadahoc",
+                "Somerset": "Somerset",
+                "Waldo": "Waldo",
+                "Washington": "Washington",
+                "York": "York"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "state:maine"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611592791
+}

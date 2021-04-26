@@ -1,10 +1,10 @@
 /*!
 Theme Name: WPGulpTheme
-Theme URI: https://github.com/ahmadawais/WPGulpTheme
-Description: A theme to demonstrate simplest implementation of WPGulp Boilerplate.
+Theme URI: https://special-lite.com
+Description: A custom theme built on Zurb Foundation for Special-Lite, Inc. based on Ahmad Awais's Gulp Workflow.
 Version: 2.2.0
-Author: Ahmad Awais
-Author URI: https://twitter.com/MrAhmadAwais/
+Author: Andrew Paschall
+Author URI: https://andrewdoeswebdesign.com
 License: MIT
 Text Domain: WPGT
 */@font-face{font-family:'Lato';font-style:normal;font-weight:400;src:url("/wp-content/themes/special-lite/assets/fonts/lato-regular-webfont.eot");src:local("Lato Regular"),local("Lato-Regular"),url("/wp-content/themes/special-lite/assets/fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"),url("/wp-content/themes/special-lite/assets/fonts/lato-regular-webfont.woff2") format("woff2"),url("/wp-content/themes/special-lite/assets/fonts/lato-regular-webfont.woff") format("woff"),url("/wp-content/themes/special-lite/assets/fonts/lato-regular-webfont.ttf") format("truetype"),url("/wp-content/themes/special-lite/assets/fonts/lato-regular-webfont.svg#Lato") format("svg")}

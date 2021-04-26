@@ -1,0 +1,78 @@
+{
+    "key": "group_600ef1c256a0e",
+    "title": "Ontario Region",
+    "fields": [
+        {
+            "key": "field_600ef1de34779",
+            "label": "Ontario Region",
+            "name": "ontario_region",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Algoma": "Algoma",
+                "Chatham-Kent": "Chatham-Kent",
+                "Durham": "Durham",
+                "Elgin": "Elgin",
+                "Essex": "Essex",
+                "Grey": "Grey",
+                "Halton": "Halton",
+                "Hamilton": "Hamilton",
+                "Huron": "Huron",
+                "Lambton": "Lambton",
+                "Lanark": "Lanark",
+                "Middlesex": "Middlesex",
+                "Muskoka": "Muskoka",
+                "Niagara": "Niagara",
+                "Nipissing": "Nipissing",
+                "Oxford": "Oxford",
+                "Peel": "Peel",
+                "Perth": "Perth",
+                "Simcoe": "Simcoe",
+                "Sudbury": "Sudbury",
+                "Thunder Bay": "Thunder Bay",
+                "Toronto": "Toronto",
+                "Waterloo": "Waterloo",
+                "Wellington": "Wellington",
+                "York": "York",
+                "Frontenac": "Frontenac",
+                "Hastings": "Hastings",
+                "Ottawa": "Ottawa",
+                "Peterborough": "Peterborough",
+                "Prescott": "Prescott",
+                "Renfrew": "Renfrew",
+                "Stormont": "Stormont"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "province:ontario"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611630072
+}

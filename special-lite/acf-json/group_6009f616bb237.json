@@ -1,0 +1,90 @@
+{
+    "key": "group_6009f616bb237",
+    "title": "Idaho Counties",
+    "fields": [
+        {
+            "key": "field_6009f62af47ed",
+            "label": "Idaho Counties",
+            "name": "idaho_counties",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Ada": "Ada",
+                "Adams": "Adams",
+                "Bannock": "Bannock",
+                "Bear Lake": "Bear Lake",
+                "Benewah": "Benewah",
+                "Bingham": "Bingham",
+                "Blaine": "Blaine",
+                "Boise": "Boise",
+                "Bonner": "Bonner",
+                "Bonneville": "Bonneville",
+                "Boundary": "Boundary",
+                "Butte": "Butte",
+                "Camas": "Camas",
+                "Canyon": "Canyon",
+                "Caribou": "Caribou",
+                "Cassia": "Cassia",
+                "Clark": "Clark",
+                "Clearwater": "Clearwater",
+                "Custer": "Custer",
+                "Elmore": "Elmore",
+                "Franklin": "Franklin",
+                "Fremont": "Fremont",
+                "Gem": "Gem",
+                "Gooding": "Gooding",
+                "Idaho": "Idaho",
+                "Jefferson": "Jefferson",
+                "Jerome": "Jerome",
+                "Kootenai": "Kootenai",
+                "Latah": "Latah",
+                "Lemhi": "Lemhi",
+                "Lewis": "Lewis",
+                "Lincoln": "Lincoln",
+                "Madison": "Madison",
+                "Minidoka": "Minidoka",
+                "Nez Perce": "Nez Perce",
+                "Oneida": "Oneida",
+                "Owyhee": "Owyhee",
+                "Payette": "Payette",
+                "Power": "Power",
+                "Shoshone": "Shoshone",
+                "Teton": "Teton",
+                "Twin Falls": "Twin Falls",
+                "Valley": "Valley",
+                "Washington": "Washington"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "state:idaho"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1611265599
+}
