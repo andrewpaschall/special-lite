@@ -1650,9 +1650,9 @@ footer .legalese .menu li a{text-decoration:underline}
 .downloads-filter .close-button-container{overflow:auto}
 .downloads-filter .close-button{color:#1a1a1a;position:relative;left:90%;z-index:0}
 .downloads-filter .close-button:focus{border:0;outline:0}
-.doc-box{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding:1em .5em;border:2px solid white;background:#fefefe}
+.doc-box{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding:1em .5em;border:2px solid white;background:#fefefe;border:2px solid #d3d4da}
 .doc-box h2,.doc-box h3,.doc-box h4,.doc-box h5,.doc-box h6{text-align:center;line-height:1.05;margin-bottom:1em}
-.doc-box .button{display:grid;grid-template-columns:90fr 10fr;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:left;grid-column-gap:5px;width:100%;vertical-align:middle;margin-bottom:10px}
+.doc-box .button{display:grid;grid-template-columns:90fr 10fr;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:left;grid-column-gap:5px;background:#1a1a1a;width:100%;vertical-align:middle;margin-bottom:10px}
 .doc-box .button:after{display:block;width:0;height:0;border:inset .25em;content:'';border-right-width:0;border-left-style:solid;border-color:transparent transparent transparent #fefefe}
 .product-photo-gallery{background:#ebebeb;display:grid;grid-template-columns:33fr 33fr 33fr;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;justify-items:stretch}
 .hover-slide-card{position:relative;width:100%}
