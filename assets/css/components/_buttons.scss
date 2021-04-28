@@ -34,3 +34,10 @@
 		outline: none;
 	}
 }
+
+.wp-block-button.aligncenter, .wp-block-buttons.aligncenter{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
