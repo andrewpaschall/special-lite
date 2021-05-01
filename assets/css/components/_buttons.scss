@@ -1,6 +1,16 @@
+$ap-button-ease-time: ease .25s;
+
 .button{
 	&.success {
 		color: $white;
+	}
+	&.hollow {
+		transition: background-color $ap-button-ease-time, border-color $ap-button-ease-time, color $ap-button-ease-time;
+		&:hover {
+			background-color: $blue;
+			border-color: $blue;
+			color: $white;
+		}
 	}
 }
 
