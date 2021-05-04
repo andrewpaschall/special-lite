@@ -31,7 +31,7 @@ get_header();
 				<div class="grid-x grid-padding-x">
 				<?php
 					//Define Term ID
-					$term_id = get_queried_object()->term_id;
+					//$term_id = get_queried_object()->term_id;
 
 					//Define Taxonomy
 					$custom_terms = get_terms( array(

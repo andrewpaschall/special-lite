@@ -5,8 +5,8 @@ $card-product-hover-title-font-size: 1.4rem;
 .card-product {
   //position: relative;
   line-height: 1.2rem;
-  transition: all 0.35s ease;
-  border: 1px solid $medium-gray;
+  transition: all $ap-button-ease-time;
+  border: 1px solid $blue;
 
   header {
     width: 100%;
@@ -23,7 +23,7 @@ $card-product-hover-title-font-size: 1.4rem;
           max-height: 100%;
       }
   }
-  
+
   .title {
     font-size: $card-product-hover-title-font-size;
     font-weight: 400;
@@ -32,7 +32,7 @@ $card-product-hover-title-font-size: 1.4rem;
   .details {
     @include card-section;
   }
-  
+
   .icons {
     width: 100%;
     align-self: flex-end;
@@ -45,7 +45,7 @@ $card-product-hover-title-font-size: 1.4rem;
     bottom: 0;
     right: 0;
     z-index: 100;
-  
+
     li {
       display: flex;
       flex-direction: column;
@@ -55,18 +55,18 @@ $card-product-hover-title-font-size: 1.4rem;
       &:last-child {
         margin-bottom: 0;
       }
-  
+
       svg{
         display: block;
         font-size: 1.5rem;
         line-height: rem-calc(40);
         width: rem-calc(40);
-        fill: $medium-gray;
-        
+        fill: $blue;
+
         .cls-1{
-          fill: $medium-gray;
+          fill: $blue;
         }
-        
+
         .cls-2 {
           fill: none;
         }
@@ -74,15 +74,15 @@ $card-product-hover-title-font-size: 1.4rem;
     }
   }
   footer {
-    background: $medium-gray;
+    background: $blue;
     position: relative;
     z-index: 200;
     a, h3 {
       color: $white;
       cursor: pointer;
-      transition: color .25s ease;
+      transition: color $ap-button-ease-time;
       &:hover {
-        color: $primary-color;
+        color: $medium-gray;
       }
     }
   }

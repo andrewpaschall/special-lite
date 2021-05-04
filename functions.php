@@ -82,8 +82,8 @@ if ( ! function_exists( 'special_lite_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 53,
+			'width'       => 225,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -311,4 +311,13 @@ function get_pagination_links() {
         'total' => $wp_query->max_num_pages,
         'prev_next'    => false
     ) );
+}
+
+
+/**
+ * Gravity Forms Fix
+ */
+add_filter('gform_init_scripts_footer', 'init_scripts');
+function init_scripts() {
+    return true;
 }

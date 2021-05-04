@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="19.28" height="17.13" viewBox="0 0 19.28 17.13">
-  <g id="fi-shopping-cart" transform="translate(0)">
-    <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="1.367" cy="1.367" rx="1.367" ry="1.367" transform="translate(4.319 14.397)" fill="gray"/>
-    <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="1.367" cy="1.367" rx="1.367" ry="1.367" transform="translate(13.914 14.397)" fill="gray"/>
-    <path id="Path_64" data-name="Path 64" d="M23.555,22.866a.8.8,0,0,0,.722-.459h0l3.386-5.864,0,0a.8.8,0,0,0-.721-1.144H14.5V13.892h0a.8.8,0,0,0-.8-.8H9.324V13.1c-.021,0-.042-.006-.064-.006a.8.8,0,0,0-.791.7h-.01v.8h0a.8.8,0,0,0,.8.8c.022,0,.042,0,.064-.006V15.4H12.2V25.546h0a.8.8,0,0,0,.8.8H26.747v-.02a.8.8,0,0,0,.739-.678H27.5v-.114s0,0,0,0,0,0,0,0v-.7s0,0,0,0a.8.8,0,0,0-.751-.8v-.005H14.5V22.866h9.054Z" transform="translate(-8.459 -13.091)" fill="gray"/>
-  </g>
-</svg>

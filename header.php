@@ -13,10 +13,6 @@
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
-	<!--Multiview Pixel-->
-	<script src="//assets.adobedtm.com/175f7caa2b90/b103ccd700cd/launch-f2e04a959beb.min.js" async></script>
-	<!--End Multiview Pixel-->
-
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -25,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content" style="display: none;"><?php esc_html_e( 'Skip to content', 'special-lite' ); ?></a>
 	<header id="masthead">
@@ -54,7 +51,17 @@
 			</nav>
 		</small>
 		<div class="title-bar flex-container align-justify" data-responsive-toggle="animated-menu" data-hide-for="large">
-			<?php the_custom_logo(); ?>
+			<?php
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+				if ( has_custom_logo() ) {
+					echo '<img src="' . esc_url( $logo[0] ) . '" class="logo" height="25" width="225" alt="' . get_bloginfo( 'name' ) . '">';
+				} else {
+					echo '<h1>' . get_bloginfo('name') . '</h1>';
+				}
+
+			?>
 			<div class="flex-container flex-dir-col">
 				<button class="menu-icon dark" type="button" data-toggle></button>
 			</div>
@@ -63,7 +70,11 @@
 		<div class="top-bar stacked-for-medium" id="animated-menu" data-animate="slide-in-left slide-out-left">
 			<div class="top-bar-left">
 				<?php
-					the_custom_logo();
+					if ( has_custom_logo() ) {
+						echo '<img src="' . esc_url( $logo[0] ) . '" class="logo" height="25" width="225" alt="' . get_bloginfo( 'name' ) . '">';
+					} else {
+						echo '<h1>' . get_bloginfo('name') . '</h1>';
+					}
 					if ( is_front_page() && is_home() ) :
 					?>
 						<h1 class="site-title">

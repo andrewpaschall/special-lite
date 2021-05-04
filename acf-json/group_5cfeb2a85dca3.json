@@ -1,0 +1,122 @@
+{
+    "key": "group_5cfeb2a85dca3",
+    "title": "Hurricane HVHZ Content",
+    "fields": [
+        {
+            "key": "field_5cfeb2a865177",
+            "label": "Hurricane HVHZ Content",
+            "name": "hvhz_content",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_60870a0e07213": {
+                    "key": "layout_60870a0e07213",
+                    "name": "single_column_layout",
+                    "label": "Single Column Layout",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cfeb2a866ede",
+                            "label": "Single Column",
+                            "name": "single_column",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5cfeb2a866f02",
+                            "label": "Column 1",
+                            "name": "column_1",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_5cfeb2a866f22",
+                            "label": "Column 2",
+                            "name": "column_2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "0": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60870a8b9f0b0": {
+                    "key": "layout_60870a8b9f0b0",
+                    "name": "two_column_layout",
+                    "label": "Two Column Layout",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "performance_rating:hurricane-hvhz"
+            }
+        ]
+    ],
+    "menu_order": 25,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1619462938
+}
